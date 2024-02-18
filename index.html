@@ -24,12 +24,24 @@
             .inter-font{
                 font-family: "Inter", sans-serif;
             }
+            p{
+              font-family: "Inter", sans-serif;
+              font-size: 18px;
+              font-weight: medium;
+              color: #03071299;
+            }
+            .dashed-border{
+              border: 2px dashed #03071233; 
+            }
+            h1,h2,h3,h4,h5{
+              color:#030712;
+            }
         </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="navbar">
+            <div class="navbar p-0">
                 <div class="navbar-start">
                   <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -58,18 +70,193 @@
                 </div>
             </div>
 
-            <div class="banner bg-[linear-gradient(90deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('images/banner.png')] h-[650px] max-w-full bg-no-repeat bg-center bg-cover rounded-[32px] mt-12 text-center">
+            <div class="banner bg-[linear-gradient(90deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('images/banner.png')] h-[650px] max-w-full bg-no-repeat border-none bg-cover rounded-[32px] mt-12 text-center">
               <div class="banner-content">
                 <h1 class="text-white text-[64px] font-extrabold pt-16">End-to-End Travel with <br> <span class="text-[#1DD100] text-center">E Poribahan</span></h1>
-                <p class="banner-text w-[690px] mx-auto text-white">Welcome! to our E-Ticket platform. Enjoy your journey with us and we are committed to make your journey like your dream. Have a good day!</p>
-                <button class="banner-btn text-[#030712] text-xl font-bold hover:bg-[#1DD100CC] bg-[#1DD100] py-4 px-8 rounded-xl">Buy Tickets</button>
-              </div>
-                
+                <p class="banner-text w-[690px] mx-auto text-white pt-8">Welcome! to our E-Ticket platform. Enjoy your journey with us and we are committed to make your journey like your dream. Have a good day!</p>
+                <button class="banner-btn text-[#030712] text-xl font-bold hover:bg-[#1DD100CC] mt-14 bg-[#1DD100] py-4 px-8 rounded-xl">Buy Tickets</button>
+              </div>  
             </div>
         </div>
     </header>
     <main>
-        
+        <section class="best-offer">
+          <div class="container">
+            <h3 class="offer-title text-[40px] font-bold text-center mt-[120px] mb-9">Best offers for you</h3>
+            <div class="coupon-part flex gap-6 justify-center">
+              <!-- left side coupon -->
+              <div class="left-coupon flex gap-[120px] bg-[#FFBF0F] p-12 rounded-3xl relative">
+                <div class="absolute top-1 right-44"><img src="images/cupon-devider.png" alt=""></div>
+                <div class="coupon-text">
+                  <h2 class="coupon-title font-black text-[40px] inter-font">15% OFF</h2>
+                  <p class="coupon-text text-xl font-semibold py-2">on your next purchase</p>
+                  <p class="coupon-date text-[18px] font-medium text-[#03071266]">use by January 2024</p>
+                </div>
+                <div class="coupon-name pt-8">
+                  <h2 class="coupon-title uppercase font-black text-[32px]">new15</h2>
+                  <p class="coupon-date text-[18px] font-medium text-[#03071266]">coupon code</p>
+                </div>
+              </div>
+              <!-- right side coupon -->
+              <div class="right-coupon bg-[#F78C9C] flex gap-[120px] p-12 rounded-3xl relative">
+                <div class="absolute top-1 right-56"><img src="images/cupon-devider.png" alt=""></div>
+                <div class="coupon-text">
+                  <h2 class="coupon-title font-black text-[40px] inter-font">20% OFF</h2>
+                  <p class="coupon-text text-xl font-semibold py-2">on your next purchase</p>
+                  <p class="coupon-date text-[18px] font-medium text-[#03071266]">use by January 2024</p>
+                </div>
+                <div class="coupon-name pt-8">
+                  <h2 class="coupon-title font-black text-[32px]">Couple 20</h2>
+                  <p class="coupon-date text-[18px] font-medium text-[#03071266]">coupon code</p>
+                </div>
+              </div>
+            </div>
+            <div class="coupon-btn text-center">
+              <button class="banner-btn border-2 border-[#1DD100] text-xl font-bold hover:bg-[#1DD10033] mt-14 text-[#1DD100] py-4 px-8 rounded-xl">See All Offers</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="paribahan mt-[120px] bg-[#F7F8F8] rounded-t-[88px]">
+          <div class="container">
+            <div class="poribahan-details pt-[120px]">
+              <h2 class="bus-title text-[#030712] font-bold text-[40px] text-center">P.H Paribahan</h2>
+              <p class="bus-content w-[690px] mx-auto text-center pt-6 pb-12">Welcome! to our E-Ticket platform. Enjoy your journey with us and we are committed to make your journey like your dream.</p>
+            </div>
+
+            <!-- Paribahan bus details -->
+            <div class="bus-details bg-white rounded-3xl flex relative">
+              <div class="bus-details-left">
+                <div class="seat-schedule w-[910px] flex justify-between p-8 ">
+                  <div class="flex gap-3 items-center">
+                    <div class="">
+                      <img class="" src="images/bus-logo.png" alt="">
+                    </div>
+                    <div class="bus-logo-text">
+                      <h2 class="bus-logo-title text-[32px] font-bold text-[#030712]">Greenline Paribahan</h2>
+                      <p class="text-center">Coach-009-WEB ! AC_Business</p>
+                    </div>
+                  </div>
+                  <div class="seat-left">
+                    <button>
+                      <p class="text-[18px] bg-[#1DD1001A] rounded-xl border-[#1DD10066] border-2 text-[#1DD100] font-semibold flex py-[16px] px-[30px] gap-[5px]"><img src="images/seat-green.png" alt=""><span>40</span>Seats left</p>
+                    </button>
+                  </div>             
+                </div>
+                 <!-- route plan --> 
+                <div class="destination w-[910px] bg-[#F7F8F8] ml-8 rounded-3xl  mb-8">
+                  <div class="route flex justify-between p-8">
+                    <p class="">Route</p>
+                    <p class="text-[#030712] font-medium">Dhaka - Sylhet</p>
+                  </div>
+                  <div class="dashed-border w-[850px] mx-auto"></div>
+  
+                  <div class="departure flex justify-between p-8">
+                    <p class="">Departure Time</p>
+                    <p class="text-[#030712] font-medium">9:00 PM</p>
+                  </div>
+                  <div class="dashed-border w-[850px] mx-auto"></div>
+  
+                  <div class="three-destination-btn p-8 flex justify-evenly">
+                    <button class="btn text-[#03071299] text-[16px] inter-font">Boarding Point - Laxmipur</button>
+                    <button class="btn text-[#03071299] text-[16px] inter-font">Dropping Point - Bogura</button>
+                    <button class="btn text-[#03071299] text-[16px] inter-font">Est. Time - 11 Hour</button>
+                  </div>
+                </div>
+              <!-- <div class="absolute"><img src="images/info-devider.png" alt=""></div> -->
+              </div>
+              <div class="seat-fees mt-[200px] ml-6 text-center">
+                <img class="mx-auto" src="images/fare.png" alt="">
+                <h3 class="text-[#030712] text-[32px] font-bold">550 Taka</h3>
+                <p class="text-2xl font-semibold">Per Seat</p>
+              </div>
+            </div>
+
+            <div class="seat-plans">
+              <!-- seat plan details left part -->
+              <div class="seat-plan-details mt-7 bg-white rounded-3xl flex">
+                <div class="seat-left-part p-8 reletive w-[700px] ">
+                  <h2 class="pb-6 text-2xl font-semibold">Select Your Seat</h2>
+                  <div class="dashed-border w-[650px]"></div>
+                  <div class="available-seleted-seat-btn flex justify-between w-[650px] py-4">
+                    <span class="available-icon"><img src="images/seat-gray.png" alt="">Available</span>
+                    <span class="selected-icon"><img src="images/seat-green-filled.png" alt="">Selected</span>
+                  </div>
+                  <div class="dashed-border w-[650px]"></div>
+                  <!-- seats buttons -->
+                  <div class="seat-buttons absolute ">
+                    <button class="btn px-5 py-2"><img class="mx-auto" src="images/tabler-icon-steering-wheel.png" alt=""></button>
+                  </div>
+                </div>
+                <!-- seat plan details right part -->
+                <div class="seat-payment-details w-[470px] pt-8 p-8">
+                  <h2 class="pb-6 text-2xl font-semibold">Select Your Seat</h2>
+                  <div class="dashed-border w-[420px]"></div>
+
+                  <div class="seat-fare-calculation p-8 bg-[#F7F8F8] mt-6 rounded-xl">
+                    <!-- seat fare calculation -->
+                    <div class="calculation-title flex justify-between">
+                      <p class="font-medium text-[#030712] pb-4">Seat <span class="bg-[#1DD100] px-3 text-white rounded-lg py-1 text-[12px] font-bold">2</span></p>
+                      <p class="font-medium text-[#030712]">Class</p>
+                      <p class="font-medium text-[#030712]">Price</p>
+                    </div>
+                    <div class="dashed-border w-[320px]"></div>
+
+                    <div class="seat-fare-details flex justify-between py-4">
+                      <p class="seat-name">C2</p>
+                      <p class="seat-class">Economy</p>
+                      <p class="seat-money">550</p>
+                    </div>
+                    <div class="seat-fare-details flex justify-between pb-4">
+                      <p class="seat-name">C2</p>
+                      <p class="seat-class">Economy</p>
+                      <p class="seat-money">550</p>
+                    </div>
+                    <hr>
+                    <div class="total-price flex justify-between pb-4">
+                      <p class="total-price-unit font-medium text-[#030712]">Total Price</p>
+                      <p class="amount font-medium text-[#030712]">BDT 1100</p>
+                    </div>
+                    <div class="coupon-input relative pb-6">
+                      <!-- <input type="text" placeholder="Have any coupon?" class="input input-bordered w-full max-w-xs border-none" /> -->
+                      <label class="input input-bordered flex items-center gap-2">
+                        <input type="text" class="grow" placeholder="Have any coupon?" />
+                        <button class="coupon-apply-button text-white bg-[#1DD100] font-semibold p-[6px] px-4 rounded-lg absolute right-2 top-[6px]">Apply</button>
+                      </label>
+                      
+                    </div>
+                    <div class="grand-total flex justify-between ">
+                      <p class="grand-total-unit font-medium text-[#030712]">Grand Total</p>
+                      <p class="amount font-medium text-[#030712]">BDT 1100</p>
+                    </div>
+                  </div>
+                  <!-- passenger form -->
+                  <div class="passenger-form">
+                    <p class="passenger-name pb-4 pt-6 font-semibold text-[#030712]">Passenger Name*</p>
+                    <label class="input input-bordered flex items-center gap-2">
+                      <input type="text" class="grow" placeholder="Enter your name" />
+                    </label>
+                    <p class="passenger-name pb-4 pt-6 font-semibold text-[#030712]">Phone Number*</p>
+                    <label class="input input-bordered flex items-center gap-2">
+                      <input type="text" class="grow" placeholder="Enter your phone number" />
+                    </label>
+                    <p class="passenger-name pb-4 pt-6 font-semibold text-[#030712]">Email ID</p>
+                    <label class="input input-bordered flex items-center gap-2">
+                      <input type="email" class="grow" placeholder="Enter your email id"/>
+                    </label>
+                    <button class="next-btn w-full bg-[#1DD100] rounded-2xl py-4 text-white text-xl font-extrabold my-6">Next</button>
+                    <div class="term-condition flex justify-evenly">
+                      <p class="terms inter-font underline">Terms and Conditions</p>
+                      <p class="cancellation-policy inter-font underline">Cancellation Policy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
     </main>
     <footer>
 
