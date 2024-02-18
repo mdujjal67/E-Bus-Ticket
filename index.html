@@ -39,17 +39,27 @@
             .sits-group{
               display: grid;
               grid-template-columns: repeat(5, 1fr);
-              justify-content: space-evenly;
-              grid-column-gap: 40px;
+              justify-content: space-between;
+              grid-column-gap: 30px;
               grid-row-gap: 24px;
               align-items: center;
+              margin: 0 auto;
+              justify-items: center;
+            }
+            .sits-bg{
+              background-color: #fff ;
             }
             .sits-btn{
-              padding: 16px 40px;
+              padding: 15px 30px;
               font-family: "Inter", sans-serif;
               font-size: 18px;
               color: #03071280;
               font-weight: 600;
+              text-align: center;
+            }
+            .reservation-button{
+              background-color: #e9e9ebd9;
+              border-radius: 12px;
             }
             .alphabet-row{
               font-family: "Inter", sans-serif;
@@ -97,7 +107,7 @@
               <div class="banner-content">
                 <h1 class="text-white text-[64px] font-extrabold pt-16">End-to-End Travel with <br> <span class="text-[#1DD100] text-center">E Poribahan</span></h1>
                 <p class="banner-text w-[690px] mx-auto text-white pt-8">Welcome! to our E-Ticket platform. Enjoy your journey with us and we are committed to make your journey like your dream. Have a good day!</p>
-                <button class="banner-btn text-[#030712] text-xl font-bold hover:bg-[#1DD100CC] mt-14 bg-[#1DD100] py-4 px-8 rounded-xl">Buy Tickets</button>
+                <button class="banner-btn text-[#030712] text-xl font-bold hover:bg-[#1DD100CC] mt-14 bg-[#1DD100] py-4 px-8 rounded-xl"><a href="#sit-booking">Buy Tickets</a></button>
               </div>  
             </div>
         </div>
@@ -162,7 +172,7 @@
                   </div>
                   <div class="seat-left">
                     <button>
-                      <p class="text-[18px] bg-[#1DD1001A] rounded-xl border-[#1DD10066] border-2 text-[#1DD100] font-semibold flex py-[16px] px-[30px] gap-[5px]"><img src="images/seat-green.png" alt=""><span>40</span>Seats left</p>
+                      <p class="text-[18px] bg-[#1DD1001A] rounded-xl border-[#1DD10066] border-2 text-[#1DD100] font-semibold flex py-[16px] px-[30px] gap-[5px]"><img src="images/seat-green.png" alt=""><span id="seat-decrease">40</span>Seats left</p>
                     </button>
                   </div>             
                 </div>
@@ -180,7 +190,7 @@
                   </div>
                   <div class="dashed-border w-[850px] mx-auto"></div>
   
-                  <div class="three-destination-btn p-8 flex justify-evenly">
+                  <div class="three-destination-btn p-8 flex justify-between">
                     <button class="btn text-[#03071299] text-[16px] inter-font">Boarding Point - Laxmipur</button>
                     <button class="btn text-[#03071299] text-[16px] inter-font">Dropping Point - Bogura</button>
                     <button class="btn text-[#03071299] text-[16px] inter-font">Est. Time - 11 Hour</button>
@@ -188,15 +198,15 @@
                 </div>
               <div class="absolute top-20 -right-[100px]"><img src="images/info-devider_2.png" alt=""></div>
               </div>
-              <div class="seat-fees mt-[170px] ml-32 text-center mx-auto">
+              <div class="seat-fees mt-[170px] text-center mx-auto">
                 <img class="mx-auto" src="images/fare.png" alt="">
                 <h3 class="text-[#030712] text-[32px] font-bold">550 Taka</h3>
                 <p class="text-2xl font-semibold">Per Seat</p>
               </div>
             </div>
 
-            <div class="seat-plans">
-              <div class="seat-plan-details mt-7 bg-white rounded-3xl flex">
+            <div id="sit-booking" class="seat-plans">
+              <div class="seat-plan-details mt-7 bg-white rounded-3xl flex justify-between">
                 <!-- sit plans left part -->
                 <div class="seat-left-part p-8 reletive w-[800px] ">
                   <h2 class="pb-6 text-2xl font-semibold">Select Your Seat</h2>
@@ -213,55 +223,55 @@
                   <!-- sits group -->
                   <div class="sits-group">
                     <div class="alphabet-row">A</div>
-                    <div id="A1" class=""><button class="btn sits-btn">A1</button></div>
-                    <div id="A2" class=""><button class="btn sits-btn">A2</button></div>
-                    <div id="A3" class=""><button class="btn sits-btn">A3</button></div>
-                    <div id="A4" class=""><button class="btn sits-btn">A4</button></div>
+                    <div id="A1" class="reservation-button"><button class=" sits-btn">A1</button></div>
+                    <div id="A2" class="reservation-button"><button class=" sits-btn">A2</button></div>
+                    <div id="A3" class="reservation-button"><button class=" sits-btn">A3</button></div>
+                    <div id="A4" class="reservation-button"><button class=" sits-btn">A4</button></div>
                     <div class="alphabet-row">B</div>
-                    <div id="B1" class=""><button class="btn sits-btn">B1</button></div>
-                    <div id="B2" class=""><button class="btn sits-btn">B2</button></div>
-                    <div id="B3" class=""><button class="btn sits-btn">B3</button></div>
-                    <div id="B4" class=""><button class="btn sits-btn sits-btn">B4</button></div>
+                    <div id="B1" class="reservation-button"><button class=" sits-btn">B1</button></div>
+                    <div id="B2" class="reservation-button"><button class=" sits-btn">B2</button></div>
+                    <div id="B3" class="reservation-button"><button class=" sits-btn">B3</button></div>
+                    <div id="B4" class="reservation-button"><button class=" sits-btn sits-btn">B4</button></div>
                     <div class="alphabet-row">C</div>
-                    <div id="C1" class=""><button class="btn sits-btn sits-btn">C1</button></div>
-                    <div id="C2" class=""><button class="btn sits-btn">C2</button></div>
-                    <div id="C3" class=""><button class="btn sits-btn">C3</button></div>
-                    <div id="C4" class=""><button class="btn sits-btn">C4</button></div>
+                    <div id="C1" class="reservation-button"><button class=" sits-btn sits-btn">C1</button></div>
+                    <div id="C2" class="reservation-button"><button class=" sits-btn">C2</button></div>
+                    <div id="C3" class="reservation-button"><button class=" sits-btn">C3</button></div>
+                    <div id="C4" class="reservation-button"><button class=" sits-btn">C4</button></div>
                     <div class="alphabet-row">D</div>
-                    <div id="D1" class=""><button class="btn sits-btn">D1</button></div>
-                    <div id="D2" class=""><button class="btn sits-btn">D2</button></div>
-                    <div id="D3" class=""><button class="btn sits-btn">D3</button></div>
-                    <div id="D4" class=""><button class="btn sits-btn">D4</button></div>
+                    <div id="D1" class="reservation-button"><button class=" sits-btn">D1</button></div>
+                    <div id="D2" class="reservation-button"><button class=" sits-btn">D2</button></div>
+                    <div id="D3" class="reservation-button"><button class=" sits-btn">D3</button></div>
+                    <div id="D4" class="reservation-button"><button class=" sits-btn">D4</button></div>
                     <div class="alphabet-row">E</div>
-                    <div id="E1" class=""><button class="btn sits-btn">E1</button></div>
-                    <div id="E2" class=""><button class="btn sits-btn">E2</button></div>
-                    <div id="E3" class=""><button class="btn sits-btn">E3</button></div>
-                    <div id="E4" class=""><button class="btn sits-btn">E4</button></div>
+                    <div id="E1" class="reservation-button"><button class=" sits-btn">E1</button></div>
+                    <div id="E2" class="reservation-button"><button class=" sits-btn">E2</button></div>
+                    <div id="E3" class="reservation-button"><button class=" sits-btn">E3</button></div>
+                    <div id="E4" class="reservation-button"><button class=" sits-btn">E4</button></div>
                     <div class="alphabet-row">F</div>
-                    <div id="F1" class=""><button class="btn sits-btn">F1</button></div>
-                    <div id="F2"  class=""><button class="btn sits-btn">F2</button></div>
-                    <div id="F3" class=""><button class="btn sits-btn">F3</button></div>
-                    <div id="F4" class=""><button class="btn sits-btn">F4</button></div>
+                    <div id="F1" class="reservation-button"><button class=" sits-btn">F1</button></div>
+                    <div id="F2" class="reservation-button"><button class=" sits-btn">F2</button></div>
+                    <div id="F3" class="reservation-button"><button class=" sits-btn">F3</button></div>
+                    <div id="F4" class="reservation-button"><button class=" sits-btn">F4</button></div>
                     <div  class="alphabet-row">G</div>
-                    <div id="G1" class=""><button class="btn sits-btn">G1</button></div>
-                    <div id="G2" class=""><button class="btn sits-btn">G2</button></div>
-                    <div id="G3" class=""><button class="btn sits-btn">G3</button></div>
-                    <div id="G4" class=""><button class="btn sits-btn">G4</button></div>
+                    <div id="G1" class="reservation-button"><button class=" sits-btn">G1</button></div>
+                    <div id="G2" class="reservation-button"><button class=" sits-btn">G2</button></div>
+                    <div id="G3" class="reservation-button"><button class=" sits-btn">G3</button></div>
+                    <div id="G4" class="reservation-button"><button class=" sits-btn">G4</button></div>
                     <div  class="alphabet-row">H</div>
-                    <div id="H1" class=""><button class="btn sits-btn">H1</button></div>
-                    <div id="H2" class=""><button class="btn sits-btn">H2</button></div>
-                    <div id="H3" class=""><button class="btn sits-btn">H3</button></div>
-                    <div id="H4" class=""><button class="btn sits-btn">H4</button></div>
+                    <div id="H1" class="reservation-button"><button class=" sits-btn">H1</button></div>
+                    <div id="H2" class="reservation-button"><button class=" sits-btn">H2</button></div>
+                    <div id="H3" class="reservation-button"><button class=" sits-btn">H3</button></div>
+                    <div id="H4" class="reservation-button"><button class=" sits-btn">H4</button></div>
                     <div class="alphabet-row">I</div>
-                    <div id="I1" class=""><button class="btn sits-btn">I1</button></div>
-                    <div id="I2" class=""><button class="btn sits-btn">I2</button></div>
-                    <div id="I3" class=""><button class="btn sits-btn">I3</button></div>
-                    <div id="I4" class=""><button class="btn sits-btn">I4</button></div>
+                    <div id="I1" class="reservation-button"><button class=" sits-btn">I1</button></div>
+                    <div id="I2" class="reservation-button"><button class=" sits-btn">I2</button></div>
+                    <div id="I3" class="reservation-button"><button class=" sits-btn">I3</button></div>
+                    <div id="I4" class="reservation-button"><button class=" sits-btn">I4</button></div>
                     <div class="alphabet-row">J</div>
-                    <div id="J1" class=""><button class="btn sits-btn">J1</button></div>
-                    <div id="J2" class=""><button class="btn sits-btn">J2</button></div>
-                    <div id="J3" class=""><button class="btn sits-btn">J3</button></div>
-                    <div id="J4" class=""><button class="btn sits-btn">J4</button></div>
+                    <div id="J1" class="reservation-button"><button class=" sits-btn">J1</button></div>
+                    <div id="J2" class="reservation-button"><button class=" sits-btn">J2</button></div>
+                    <div id="J3" class="reservation-button"><button class=" sits-btn">J3</button></div>
+                    <div id="J4" class="reservation-button"><button class=" sits-btn">J4</button></div>
                   </div>
                 </div>
 
@@ -273,7 +283,7 @@
                   <div class="seat-fare-calculation p-8 bg-[#F7F8F8] mt-6 rounded-xl">
                     <!-- seat fare calculation -->
                     <div class="calculation-title flex justify-between">
-                      <p class="font-medium text-[#030712] pb-4 items-center">Seat <span class="bg-[#1DD100] px-3 text-white rounded-lg py-1 text-[12px] font-bold">2</span></p>
+                      <p class="font-medium text-[#030712] pb-4 items-center">Seat <span id="seat-increase" class="bg-[#1DD100] px-3 text-white rounded-lg py-1 text-[12px] font-bold">0</span></p>
                       <p class="font-medium text-[#030712]">Class</p>
                       <p class="font-medium text-[#030712]">Price</p>
                     </div>
