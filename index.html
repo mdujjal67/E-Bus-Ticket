@@ -31,15 +31,36 @@
               color: #03071299;
             }
             .dashed-border{
-              border: 2px dashed #03071233; 
+              border: 1px dashed #03071233; 
             }
             h1,h2,h3,h4,h5{
               color:#030712;
             }
+            .sits-group{
+              display: grid;
+              grid-template-columns: repeat(5, 1fr);
+              justify-content: space-evenly;
+              grid-column-gap: 40px;
+              grid-row-gap: 24px;
+              align-items: center;
+            }
+            .sits-btn{
+              padding: 16px 40px;
+              font-family: "Inter", sans-serif;
+              font-size: 18px;
+              color: #03071280;
+              font-weight: 600;
+            }
+            .alphabet-row{
+              font-family: "Inter", sans-serif;
+              font-size: 18px;
+              color: #03071280;
+              font-weight: 600;
+            }
         </style>
 </head>
 <body>
-    <header>
+    <header id="header-section">
         <div class="container">
             <div class="navbar p-0">
                 <div class="navbar-start">
@@ -65,7 +86,9 @@
                 </div>
                 <div class="navbar-end">
                   <button>
-                    <p class="text-xl bg-[#1DD1001A] rounded-xl border-[#1DD10066] border-2 text-[#1DD100] font-bold flex py-[16px] px-[30px] gap-[10px]">Bus<img src="images/bus-icon.png" alt=""></p>
+                    <a href="#ph-poribahan">
+                      <p class="text-xl bg-[#1DD1001A] rounded-xl border-[#1DD10066] border-2 text-[#1DD100] font-bold flex py-[16px] px-[30px] gap-[10px]">Bus<img src="images/bus-icon.png" alt=""></p>
+                    </a>
                   </button>
                 </div>
             </div>
@@ -125,8 +148,8 @@
             </div>
 
             <!-- Paribahan bus details -->
-            <div class="bus-details bg-white rounded-3xl flex relative">
-              <div class="bus-details-left">
+            <div id="ph-poribahan" class="bus-details bg-white rounded-3xl flex justify-between">
+              <div class="bus-details-left relative">
                 <div class="seat-schedule w-[910px] flex justify-between p-8 ">
                   <div class="flex gap-3 items-center">
                     <div class="">
@@ -163,9 +186,9 @@
                     <button class="btn text-[#03071299] text-[16px] inter-font">Est. Time - 11 Hour</button>
                   </div>
                 </div>
-              <!-- <div class="absolute"><img src="images/info-devider.png" alt=""></div> -->
+              <div class="absolute top-20 -right-[100px]"><img src="images/info-devider_2.png" alt=""></div>
               </div>
-              <div class="seat-fees mt-[200px] ml-6 text-center">
+              <div class="seat-fees mt-[170px] ml-32 text-center mx-auto">
                 <img class="mx-auto" src="images/fare.png" alt="">
                 <h3 class="text-[#030712] text-[32px] font-bold">550 Taka</h3>
                 <p class="text-2xl font-semibold">Per Seat</p>
@@ -173,21 +196,75 @@
             </div>
 
             <div class="seat-plans">
-              <!-- seat plan details left part -->
               <div class="seat-plan-details mt-7 bg-white rounded-3xl flex">
-                <div class="seat-left-part p-8 reletive w-[700px] ">
+                <!-- sit plans left part -->
+                <div class="seat-left-part p-8 reletive w-[800px] ">
                   <h2 class="pb-6 text-2xl font-semibold">Select Your Seat</h2>
-                  <div class="dashed-border w-[650px]"></div>
-                  <div class="available-seleted-seat-btn flex justify-between w-[650px] py-4">
-                    <span class="available-icon"><img src="images/seat-gray.png" alt="">Available</span>
-                    <span class="selected-icon"><img src="images/seat-green-filled.png" alt="">Selected</span>
+                  <div class="dashed-border w-[720px]"></div>
+                  <div class="available-seleted-seat-btn flex justify-between mr-4 py-4">
+                    <span class="available-icon flex gap-1"><img src="images/seat-gray.png" alt="">Available</span>
+                    <span class="selected-icon flex gap-1"><img src="images/seat-green-filled.png" alt="">Selected</span>
                   </div>
-                  <div class="dashed-border w-[650px]"></div>
+                  <div class="dashed-border w-[720px] mb-6"></div>
                   <!-- seats buttons -->
-                  <div class="seat-buttons absolute ">
-                    <button class="btn px-5 py-2"><img class="mx-auto" src="images/tabler-icon-steering-wheel.png" alt=""></button>
+                  <div class="wheel-seat-buttons text-right mb-6">
+                    <button class="btn px-7 py-2 mr-2 bg-[#03071233]"><img class="mx-auto" src="images/tabler-icon-steering-wheel.png" alt=""></button>
+                  </div>
+                  <!-- sits group -->
+                  <div class="sits-group">
+                    <div class="alphabet-row">A</div>
+                    <div id="A1" class=""><button class="btn sits-btn">A1</button></div>
+                    <div id="A2" class=""><button class="btn sits-btn">A2</button></div>
+                    <div id="A3" class=""><button class="btn sits-btn">A3</button></div>
+                    <div id="A4" class=""><button class="btn sits-btn">A4</button></div>
+                    <div class="alphabet-row">B</div>
+                    <div id="B1" class=""><button class="btn sits-btn">B1</button></div>
+                    <div id="B2" class=""><button class="btn sits-btn">B2</button></div>
+                    <div id="B3" class=""><button class="btn sits-btn">B3</button></div>
+                    <div id="B4" class=""><button class="btn sits-btn sits-btn">B4</button></div>
+                    <div class="alphabet-row">C</div>
+                    <div id="C1" class=""><button class="btn sits-btn sits-btn">C1</button></div>
+                    <div id="C2" class=""><button class="btn sits-btn">C2</button></div>
+                    <div id="C3" class=""><button class="btn sits-btn">C3</button></div>
+                    <div id="C4" class=""><button class="btn sits-btn">C4</button></div>
+                    <div class="alphabet-row">D</div>
+                    <div id="D1" class=""><button class="btn sits-btn">D1</button></div>
+                    <div id="D2" class=""><button class="btn sits-btn">D2</button></div>
+                    <div id="D3" class=""><button class="btn sits-btn">D3</button></div>
+                    <div id="D4" class=""><button class="btn sits-btn">D4</button></div>
+                    <div class="alphabet-row">E</div>
+                    <div id="E1" class=""><button class="btn sits-btn">E1</button></div>
+                    <div id="E2" class=""><button class="btn sits-btn">E2</button></div>
+                    <div id="E3" class=""><button class="btn sits-btn">E3</button></div>
+                    <div id="E4" class=""><button class="btn sits-btn">E4</button></div>
+                    <div class="alphabet-row">F</div>
+                    <div id="F1" class=""><button class="btn sits-btn">F1</button></div>
+                    <div id="F2"  class=""><button class="btn sits-btn">F2</button></div>
+                    <div id="F3" class=""><button class="btn sits-btn">F3</button></div>
+                    <div id="F4" class=""><button class="btn sits-btn">F4</button></div>
+                    <div  class="alphabet-row">G</div>
+                    <div id="G1" class=""><button class="btn sits-btn">G1</button></div>
+                    <div id="G2" class=""><button class="btn sits-btn">G2</button></div>
+                    <div id="G3" class=""><button class="btn sits-btn">G3</button></div>
+                    <div id="G4" class=""><button class="btn sits-btn">G4</button></div>
+                    <div  class="alphabet-row">H</div>
+                    <div id="H1" class=""><button class="btn sits-btn">H1</button></div>
+                    <div id="H2" class=""><button class="btn sits-btn">H2</button></div>
+                    <div id="H3" class=""><button class="btn sits-btn">H3</button></div>
+                    <div id="H4" class=""><button class="btn sits-btn">H4</button></div>
+                    <div class="alphabet-row">I</div>
+                    <div id="I1" class=""><button class="btn sits-btn">I1</button></div>
+                    <div id="I2" class=""><button class="btn sits-btn">I2</button></div>
+                    <div id="I3" class=""><button class="btn sits-btn">I3</button></div>
+                    <div id="I4" class=""><button class="btn sits-btn">I4</button></div>
+                    <div class="alphabet-row">J</div>
+                    <div id="J1" class=""><button class="btn sits-btn">J1</button></div>
+                    <div id="J2" class=""><button class="btn sits-btn">J2</button></div>
+                    <div id="J3" class=""><button class="btn sits-btn">J3</button></div>
+                    <div id="J4" class=""><button class="btn sits-btn">J4</button></div>
                   </div>
                 </div>
+
                 <!-- seat plan details right part -->
                 <div class="seat-payment-details w-[470px] pt-8 p-8">
                   <h2 class="pb-6 text-2xl font-semibold">Select Your Seat</h2>
@@ -196,7 +273,7 @@
                   <div class="seat-fare-calculation p-8 bg-[#F7F8F8] mt-6 rounded-xl">
                     <!-- seat fare calculation -->
                     <div class="calculation-title flex justify-between">
-                      <p class="font-medium text-[#030712] pb-4">Seat <span class="bg-[#1DD100] px-3 text-white rounded-lg py-1 text-[12px] font-bold">2</span></p>
+                      <p class="font-medium text-[#030712] pb-4 items-center">Seat <span class="bg-[#1DD100] px-3 text-white rounded-lg py-1 text-[12px] font-bold">2</span></p>
                       <p class="font-medium text-[#030712]">Class</p>
                       <p class="font-medium text-[#030712]">Price</p>
                     </div>
@@ -218,10 +295,9 @@
                       <p class="amount font-medium text-[#030712]">BDT 1100</p>
                     </div>
                     <div class="coupon-input relative pb-6">
-                      <!-- <input type="text" placeholder="Have any coupon?" class="input input-bordered w-full max-w-xs border-none" /> -->
                       <label class="input input-bordered flex items-center gap-2">
                         <input type="text" class="grow" placeholder="Have any coupon?" />
-                        <button class="coupon-apply-button text-white bg-[#1DD100] font-semibold p-[6px] px-4 rounded-lg absolute right-2 top-[6px]">Apply</button>
+                        <button class="coupon-apply-button text-white bg-[#1DD100] font-semibold p-[6px] px-4 rounded-lg absolute right-[6px] top-[6px]">Apply</button>
                       </label>
                       
                     </div>
@@ -244,7 +320,7 @@
                     <label class="input input-bordered flex items-center gap-2">
                       <input type="email" class="grow" placeholder="Enter your email id"/>
                     </label>
-                    <button class="next-btn w-full bg-[#1DD100] rounded-2xl py-4 text-white text-xl font-extrabold my-6">Next</button>
+                    <button class="next-btn w-full bg-[#1DD100] rounded-2xl py-4 text-white text-xl font-extrabold my-6 hover:bg-green-600">Next</button>
                     <div class="term-condition flex justify-evenly">
                       <p class="terms inter-font underline">Terms and Conditions</p>
                       <p class="cancellation-policy inter-font underline">Cancellation Policy</p>
@@ -253,13 +329,47 @@
                 </div>
               </div>
             </div>
-            
           </div>
         </section>
 
     </main>
-    <footer>
-
+    <!-- footer section -->
+    <footer class="mt-[120px] bg-[#030712]">
+      <div class="footer-wrapper pt-[120px]">
+        <div class="container">
+          <div class="flex justify-between">
+            <div class="footer-left">
+              <a href="#header-section">
+                <h2 class="footer_title text-4xl font-extrabold text-[#f9f9f9]">E-Ticket</h2>
+              </a>
+              <p class="inter-font text-[18px] text-[#ffffffCC] pt-4">E-Ticket is a digital platform which gives you br the best <br> performance for your journey.</p>
+            </div>
+            <div class="footer-right">
+              <p class="download-text text-white pb-3">Download our app</p>
+              <a href="#">
+                <div class="google-play-area flex gap-2 px-3 py-1 border-white border-2 rounded-xl items-center">
+                  <img class="w-10 h-10" src="images/playstore.png" alt="">
+                  <p class="playstore-text  text-white">Get it on <br> <span class="text-white text-2xl">Google Play</span></p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <hr class="my-8 text-[$ffffff4D]">
+          <div class="footer-bottom-part flex justify-between">
+            <div class="footer-bottom-left">
+              <p class="text-[#ffffffB3] ">@all rights reserved, P-Ticket services limited.2024</p>
+            </div>
+            <div class="footer-bootom-right flex justify-between gap-8 pb-[120px]">
+              <p class="text-white font-medium"><a href="#">Terms & condition</a></p>
+              <p class="text-white font-medium"><a href="#">Return & refund policy</a></p>
+              <p class="text-white font-medium"><a href="#">Privacy policy</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+
+
+    <script src="ticket_system.js"></script>
 </body>
 </html>
