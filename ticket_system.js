@@ -12,7 +12,7 @@ let initialAmount = 0;
 // Adding the click event listener to each button
 for (const button of reservationButtons) {
     button.addEventListener('click', () => {
-        if (clickedCount < 4 ) {
+        if (clickedCount < 4 && !button.disabled) {
             clickedCount++;
             button.disabled = true;
 
@@ -39,7 +39,7 @@ for (const button of reservationButtons) {
             updatedDetailsElement.appendChild(seatNumber);
 
             const seatClass = document.createElement('p');
-            seatClass.innerText = 'Business';
+            seatClass.innerText = 'Economy';
             seatClass.style.marginRight = '60px';
             seatClass.style.marginLeft = '100px';
             updatedDetailsElement.appendChild(seatClass);
