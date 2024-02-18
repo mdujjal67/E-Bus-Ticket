@@ -46,6 +46,11 @@
               margin: 0 auto;
               justify-items: center;
             }
+            .ticket-details-divide{
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              justify-content: space-between;
+            }
             .sits-bg{
               background-color: #fff ;
             }
@@ -103,7 +108,7 @@
                 </div>
             </div>
 
-            <div class="banner bg-[linear-gradient(90deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('images/banner.png')] h-[650px] max-w-full bg-no-repeat border-none bg-cover rounded-[32px] mt-12 text-center">
+            <div class="banner bg-[linear-gradient(90deg,rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url('images/banner.png')] h-[650px] max-w-full bg-no-repeat border-none bg-cover rounded-[32px] mt-12 text-center">
               <div class="banner-content">
                 <h1 class="text-white text-[64px] font-extrabold pt-16">End-to-End Travel with <br> <span class="text-[#1DD100] text-center">E Poribahan</span></h1>
                 <p class="banner-text w-[690px] mx-auto text-white pt-8">Welcome! to our E-Ticket platform. Enjoy your journey with us and we are committed to make your journey like your dream. Have a good day!</p>
@@ -287,22 +292,18 @@
                       <p class="font-medium text-[#030712]">Class</p>
                       <p class="font-medium text-[#030712]">Price</p>
                     </div>
-                    <div class="dashed-border w-[320px]"></div>
+                    <div class="dashed-border w-[340px]"></div>
 
-                    <div class="seat-fare-details flex justify-between py-4">
-                      <p class="seat-name">C2</p>
+                    <div id="updated-details" class="justify-between ticket-details-divide my-2">
+                      <!-- <p class="seat-name">C2</p>
                       <p class="seat-class">Economy</p>
-                      <p class="seat-money">550</p>
+                      <p class="seat-money">550</p> -->
+                      
                     </div>
-                    <div class="seat-fare-details flex justify-between pb-4">
-                      <p class="seat-name">C2</p>
-                      <p class="seat-class">Economy</p>
-                      <p class="seat-money">550</p>
-                    </div>
-                    <hr>
+                    <hr class="my-2">
                     <div class="total-price flex justify-between pb-4">
                       <p class="total-price-unit font-medium text-[#030712]">Total Price</p>
-                      <p class="amount font-medium text-[#030712]">BDT 1100</p>
+                      <p class="amount font-medium text-[#030712]">BDT <span id="total-price-amount"></span></p>
                     </div>
                     <div class="coupon-input relative pb-6">
                       <label class="input input-bordered flex items-center gap-2">
@@ -313,7 +314,7 @@
                     </div>
                     <div class="grand-total flex justify-between ">
                       <p class="grand-total-unit font-medium text-[#030712]">Grand Total</p>
-                      <p class="amount font-medium text-[#030712]">BDT 1100</p>
+                      <p class="amount font-medium text-[#030712]">BDT <span id="grand-total-amount">1100</span></p>
                     </div>
                   </div>
                   <!-- passenger form -->
@@ -332,8 +333,8 @@
                     </label>
                     <button class="next-btn w-full bg-[#1DD100] rounded-2xl py-4 text-white text-xl font-extrabold my-6 hover:bg-green-600">Next</button>
                     <div class="term-condition flex justify-evenly">
-                      <p class="terms inter-font underline">Terms and Conditions</p>
-                      <p class="cancellation-policy inter-font underline">Cancellation Policy</p>
+                      <p class="terms inter-font underline"><a href="#rules-and-regulation">Terms and Conditions</a></p>
+                      <p class="cancellation-policy inter-font underline"><a href="#rules-and-regulation">Cancellation Policy</a></p>
                     </div>
                   </div>
                 </div>
@@ -370,7 +371,7 @@
               <p class="text-[#ffffffB3] ">@all rights reserved, P-Ticket services limited.2024</p>
             </div>
             <div class="footer-bootom-right flex justify-between gap-8 pb-[120px]">
-              <p class="text-white font-medium"><a href="#">Terms & condition</a></p>
+              <p id="rules-and-regulation" class="text-white font-medium"><a href="#">Terms & condition</a></p>
               <p class="text-white font-medium"><a href="#">Return & refund policy</a></p>
               <p class="text-white font-medium"><a href="#">Privacy policy</a></p>
             </div>
