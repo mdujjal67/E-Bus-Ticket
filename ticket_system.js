@@ -4,16 +4,13 @@ const updateSeatElement = document.getElementById('seat-increase');
 const updatedDetailsElement = document.getElementById('updated-details');
 const updateTotalAmount = document.getElementById('total-price-amount');
 const grandTotalElement = document.getElementById('grand-total-amount');
-// const nextButton = document.getElementById('next-btn');
-// const numberInput = document.getElementById('number-input');
 
 let clickedCount = 0;
 let totalSeats = 40;
 let initialSeats = 0;
 let initialAmount = 0;
 let initialGrandTotal = 0;
-
-// nextButton.disabled = true;
+let selectedSeatNumber = '';
 
 // Adding the click event listener to each button
 for (const button of reservationButtons) {
@@ -39,20 +36,14 @@ for (const button of reservationButtons) {
             totalMoney = initialAmount * 550;
             updateTotalAmount.innerText = totalMoney;
             
-
             // update the grand total amount beside the total amount
             initialGrandTotal++;
             grandTotal = initialAmount * 550;
             grandTotalElement.innerText = grandTotal;
 
-            // enable the next button after sit booking and input number
-            // if(initialSeats > 0 &&  parseInt(numberInput.value) > 0){
-            //     nextButton.disabled = false;
-            // }
-
             // set seat details after clicking seat button
             const seatNumber = document.createElement('p');
-            seatNumber.innerText = 'C2';
+            seatNumber.innerText = button.innerText;
             updatedDetailsElement.appendChild(seatNumber);
 
             const seatClass = document.createElement('p');
@@ -64,9 +55,7 @@ for (const button of reservationButtons) {
             const seatPrice = document.createElement('p');
             seatPrice.innerText = '550';
             updatedDetailsElement.appendChild(seatPrice);
-            seatPrice.style.marginLeft = '20px';
-
-            
+            seatPrice.style.marginLeft = '20px'; 
         } 
         else {
             alert('Sorry! Try another time.');
@@ -120,7 +109,7 @@ function applyCoupon() {
         couponInput.focus();
         return;
     }
-    
+
     // hide the coupon apply field and button
     const originalTotalPrice = parseFloat(totalPriceElement.innerText);
     const discount = calculateDiscount(couponCode, originalTotalPrice);
@@ -142,13 +131,16 @@ document.getElementById('coupon-apply-button').addEventListener('click', applyCo
 document.getElementById('next-btn').addEventListener('click', function() {
     const sendButtonSection = document.getElementById('sit-booking');
     const phoneNumberInput = document.getElementById('number-input');
-        // hide the input field part
+
+        // hide the input field part using condition
     if (clickedCount >= 1 && phoneNumberInput.value.trim() !== '') {
         sendButtonSection.classList.add('hidden');
+
         // show the modal message part
         const modalMessage = document.getElementById('modal-message');
         modalMessage.classList.remove('hidden');
-    } else {
+    } 
+    else {
         alert('Please select at least one seat and provide your phone number.');
     }
 });
