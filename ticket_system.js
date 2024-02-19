@@ -64,6 +64,7 @@ for (const button of reservationButtons) {
     });
 }
 
+// ---------------Coupon section javascript functions----------------
 
 // Function to calculate the discount based on coupon code
 function calculateDiscount(couponCode, originalTotalPrice) {
@@ -86,6 +87,7 @@ function updateGrandTotal(discount, originalTotalPrice) {
         grandTotalElement.innerText = grandTotalPrice.toFixed(2);
     } 
 }
+
 
 // Function to handle the coupon application
 function applyCoupon() {
@@ -116,7 +118,26 @@ function isValidCouponCode(couponCode) {
 document.getElementById('coupon-apply-button').addEventListener('click', applyCoupon);
 
 
+// --------------Modal section javascript functions---------------
 
-
-
+// Add event listener to the "send" button to show modal part and also hide sit booking part
+document.getElementById('next-btn').addEventListener('click', function() {
+    // Hide the send button section
+    const sendButtonSection = document.getElementById('sit-booking');
+    sendButtonSection.classList.add('hidden');
   
+    // Show the modal message
+    const modalMessage = document.getElementById('modal-message');
+    modalMessage.classList.remove('hidden');
+  });
+  
+  
+  document.getElementById('continue-btn').addEventListener('click', function() {
+    // Hide the send modal part
+    const sendButtonSection = document.getElementById('modal-message');
+    sendButtonSection.classList.add('hidden');
+  
+    // Show the modal message
+    const modalMessage = document.getElementById('sit-booking');
+    modalMessage.classList.remove('hidden');
+  });
