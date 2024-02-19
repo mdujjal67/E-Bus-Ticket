@@ -72,6 +72,14 @@
               color: #03071280;
               font-weight: 600;
             }
+
+            /* Hide the up and down arrows for number input fields */
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0 !important;
+            }
+
         </style>
 </head>
 <body>
@@ -211,14 +219,14 @@
             </div>
 
             <!-- modal part for showing -->
-            <div id="modal-message" class="hidden  pt-40 pb-32">
+            <div id="modal-message" class="hidden  pt-52 pb-48">
               <div class="container">
                 <div class="moral-wrapper bg-white rounded-2xl p-14 w-[750px] text-center mx-auto">
                   <img class="mx-auto" src="images/success.png" alt="success-logo">
                   <h3 class="success-title uppercase text-[#27AE60] inter-font text-2xl font-bold py-9">success</h3>
                   <p class="success-text text-xl clear-start font-medium pb-2">Thank you for Booking Our Bus Seats. <br>
                     We are working hard to find the best service and deals for you.</p>
-                  <p class="inter-font text-xl text-[#4A4A4A] font-light pb-5">Shortly you will find a confirmation in your email.</p>
+                  <p class="inter-font text-xl text-[#4A4A4A] font-light pb-7">Shortly you will find a confirmation in your email.</p>
                   <button id="continue-btn" class=" bg-[#27AE60] hover:bg-[#1DD100] rounded-[32px] px-[90px] py-4 text-white text-xl font-bold">Continue</button>
                 </div>
               </div>
@@ -310,10 +318,6 @@
                     <div class="dashed-border w-[340px]"></div>
 
                     <div id="updated-details" class="justify-between ticket-details-divide my-2">
-                      <!-- <p class="seat-name">C2</p>
-                      <p class="seat-class">Economy</p>
-                      <p class="seat-money">550</p> -->
-                      
                     </div>
                     <hr class="my-2">
                     <div class="total-price flex justify-between pb-4">
@@ -325,7 +329,6 @@
                         <input id="coupon-input" type="text" class="grow" placeholder="Have any coupon?" />
                         <button id="coupon-apply-button" class=" text-white bg-[#1DD100] font-semibold p-[6px] px-4 rounded-lg absolute right-[6px] top-[6px]">Apply</button>
                       </label>
-                      
                     </div>
                     <div class="grand-total flex justify-between ">
                       <p class="grand-total-unit font-medium text-[#030712]">Grand Total</p>
@@ -333,14 +336,14 @@
                     </div>
                   </div>
                   <!-- passenger form -->
-                  <div class="passenger-form">
+                  <div id="passenger-form">
                     <p class="passenger-name pb-4 pt-6 font-semibold text-[#030712]">Passenger Name*</p>
                     <label class="input input-bordered flex items-center gap-2">
                       <input type="text" class="grow" placeholder="Enter your name" />
                     </label>
                     <p class="passenger-name pb-4 pt-6 font-semibold text-[#030712]">Phone Number*</p>
                     <label class="input input-bordered flex items-center gap-2">
-                      <input type="text" class="grow" placeholder="Enter your phone number" />
+                      <input type="number" class="grow" placeholder="Enter your phone number" />
                     </label>
                     <p class="passenger-name pb-4 pt-6 font-semibold text-[#030712]">Email ID</p>
                     <label class="input input-bordered flex items-center gap-2">

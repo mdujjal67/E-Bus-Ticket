@@ -4,6 +4,7 @@ const updateSeatElement = document.getElementById('seat-increase');
 const updatedDetailsElement = document.getElementById('updated-details');
 const updateTotalAmount = document.getElementById('total-price-amount');
 const grandTotalElement = document.getElementById('grand-total-amount');
+const nextButton = document.getElementById('next-btn');
 
 
 let clickedCount = 0;
@@ -11,6 +12,8 @@ let totalSeats = 40;
 let initialSeats = 0;
 let initialAmount = 0;
 let initialGrandTotal = 0;
+
+nextButton.disabled = true;
 
 // Adding the click event listener to each button
 for (const button of reservationButtons) {
@@ -42,6 +45,11 @@ for (const button of reservationButtons) {
             grandTotal = initialAmount * 550;
             grandTotalElement.innerText = grandTotal;
 
+            // enable the next button after sit booking and input number
+            if(initialSeats > 0 && inputFields ==='number'){
+                nextButton.disabled = false;
+            }
+
             // set seat details after clicking seat button
             const seatNumber = document.createElement('p');
             seatNumber.innerText = 'C2';
@@ -58,7 +66,9 @@ for (const button of reservationButtons) {
             updatedDetailsElement.appendChild(seatPrice);
             seatPrice.style.marginLeft = '20px';
 
-        } else {
+            
+        } 
+        else {
             alert('Sorry! Try another time.');
         }
     });
@@ -88,13 +98,21 @@ function updateGrandTotal(discount, originalTotalPrice) {
     } 
 }
 
-
 // Function to handle the coupon application
 function applyCoupon() {
     const couponInput = document.getElementById('coupon-input');
     const couponCode = couponInput.value;
     const totalPriceElement = document.getElementById('total-price-amount');
     const hideCouponApplyField = document.getElementById('coupon-apply-field');
+
+    // clear the coupon input field after browser reload
+    const inputFields = document.querySelectorAll('#coupon-apply-field input');
+    for(let i = 0; i < inputFields.length; i++){
+        const fieldType = inputFields[i].type.toLowerCase();
+        if(fieldType === 'text'){
+            inputFields[i].value = '';
+        }
+    }
 
     // Basic validation for coupon code
     if (!isValidCouponCode(couponCode)) {
@@ -118,11 +136,11 @@ function isValidCouponCode(couponCode) {
 document.getElementById('coupon-apply-button').addEventListener('click', applyCoupon);
 
 
-// --------------Modal section javascript functions---------------
+// -----------------Modal section javascript functions-------------------
 
-// Add event listener to the "send" button to show modal part and also hide sit booking part
+
 document.getElementById('next-btn').addEventListener('click', function() {
-    // Hide the send button section
+    // Hide the input fields section
     const sendButtonSection = document.getElementById('sit-booking');
     sendButtonSection.classList.add('hidden');
   
@@ -131,13 +149,26 @@ document.getElementById('next-btn').addEventListener('click', function() {
     modalMessage.classList.remove('hidden');
   });
   
-  
-  document.getElementById('continue-btn').addEventListener('click', function() {
-    // Hide the send modal part
+document.getElementById('continue-btn').addEventListener('click', function() {
+    // Show the input fields part
     const sendButtonSection = document.getElementById('modal-message');
     sendButtonSection.classList.add('hidden');
   
-    // Show the modal message
+    // Hide the modal message part
     const modalMessage = document.getElementById('sit-booking');
     modalMessage.classList.remove('hidden');
+
+    // clear the input fields after return to the sit booking part
+    const inputFields = document.querySelectorAll('#passenger-form input');
+    for(let i = 0; i < inputFields.length; i++){
+        const fieldType = inputFields[i].type.toLowerCase();
+        if(fieldType === 'text' || fieldType === 'email' || fieldType === 'number'){
+            inputFields[i].value = '';
+        }
+    }
+
+    // reload the browser after return to the sit booking part
+    setTimeout(function(){
+        window.location.reload();
+    }, 100);
   });
