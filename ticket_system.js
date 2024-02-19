@@ -120,7 +120,8 @@ function applyCoupon() {
         couponInput.focus();
         return;
     }
-
+    
+    // hide the coupon apply field and button
     const originalTotalPrice = parseFloat(totalPriceElement.innerText);
     const discount = calculateDiscount(couponCode, originalTotalPrice);
     updateGrandTotal(discount, originalTotalPrice);
@@ -138,10 +139,9 @@ document.getElementById('coupon-apply-button').addEventListener('click', applyCo
 
 // -----------------Modal section javascript functions-------------------
 
-
 document.getElementById('next-btn').addEventListener('click', function() {
     const sendButtonSection = document.getElementById('sit-booking');
-    const phoneNumberInput = document.getElementById('phone-number-input');
+    const phoneNumberInput = document.getElementById('number-input');
         // hide the input field part
     if (clickedCount >= 1 && phoneNumberInput.value.trim() !== '') {
         sendButtonSection.classList.add('hidden');
@@ -153,7 +153,6 @@ document.getElementById('next-btn').addEventListener('click', function() {
     }
 });
 
-  
 document.getElementById('continue-btn').addEventListener('click', function() {
     // Show the input fields part
     const sendButtonSection = document.getElementById('modal-message');
