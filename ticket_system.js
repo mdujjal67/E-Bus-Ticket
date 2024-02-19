@@ -4,8 +4,8 @@ const updateSeatElement = document.getElementById('seat-increase');
 const updatedDetailsElement = document.getElementById('updated-details');
 const updateTotalAmount = document.getElementById('total-price-amount');
 const grandTotalElement = document.getElementById('grand-total-amount');
-const nextButton = document.getElementById('next-btn');
-
+// const nextButton = document.getElementById('next-btn');
+// const numberInput = document.getElementById('number-input');
 
 let clickedCount = 0;
 let totalSeats = 40;
@@ -13,7 +13,7 @@ let initialSeats = 0;
 let initialAmount = 0;
 let initialGrandTotal = 0;
 
-nextButton.disabled = true;
+// nextButton.disabled = true;
 
 // Adding the click event listener to each button
 for (const button of reservationButtons) {
@@ -46,9 +46,9 @@ for (const button of reservationButtons) {
             grandTotalElement.innerText = grandTotal;
 
             // enable the next button after sit booking and input number
-            if(initialSeats > 0 && inputFields ==='number'){
-                nextButton.disabled = false;
-            }
+            // if(initialSeats > 0 &&  parseInt(numberInput.value) > 0){
+            //     nextButton.disabled = false;
+            // }
 
             // set seat details after clicking seat button
             const seatNumber = document.createElement('p');
@@ -140,14 +140,19 @@ document.getElementById('coupon-apply-button').addEventListener('click', applyCo
 
 
 document.getElementById('next-btn').addEventListener('click', function() {
-    // Hide the input fields section
     const sendButtonSection = document.getElementById('sit-booking');
-    sendButtonSection.classList.add('hidden');
-  
-    // Show the modal message
-    const modalMessage = document.getElementById('modal-message');
-    modalMessage.classList.remove('hidden');
-  });
+    const phoneNumberInput = document.getElementById('phone-number-input');
+        // hide the input field part
+    if (clickedCount >= 1 && phoneNumberInput.value.trim() !== '') {
+        sendButtonSection.classList.add('hidden');
+        // show the modal message part
+        const modalMessage = document.getElementById('modal-message');
+        modalMessage.classList.remove('hidden');
+    } else {
+        alert('Please select at least one seat and provide your phone number.');
+    }
+});
+
   
 document.getElementById('continue-btn').addEventListener('click', function() {
     // Show the input fields part
